@@ -1,0 +1,37 @@
+Dependencies used in my notebook for the Assignment 1:
+
+# For reading datasets
+import os
+
+# For general and visualizations
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from collections import Counter
+
+# For ignoring warnings
+import warnings
+warnings.filterwarnings("ignore")
+
+# For text cleaning
+import nltk
+from nltk.stem import *
+nltk.download('punkt') 
+nltk.download('wordnet') 
+nltk.download('stopwords') 
+nltk.download('omw-1.4')
+from nltk.corpus import stopwords
+from nltk import word_tokenize
+import re
+
+# For using tf-idf technique to further pre-process the text data
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# For building LDA model
+!pip install gensim pyLDAvis
+
+import pyLDAvis.gensim_models
+from gensim.corpora.dictionary import Dictionary
+from gensim.models import LdaMulticore
+from gensim.models import CoherenceModel
